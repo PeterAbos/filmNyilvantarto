@@ -40,7 +40,11 @@ class Router
     }
 
     private function handleGetRequests(mixed $requestUri) {
-
+        switch ($requestUri) {
+            case '/':
+                HomeController::index();
+                return;
+        }
     }
 
     private function handlePostRequests(mixed $requestUri) {
