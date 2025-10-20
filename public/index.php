@@ -18,5 +18,8 @@ ini_set('error_log', 'error_log.log');
 //displayBodyEnd();
 include __DIR__ . '/../vendor/autoload.php';
 
-echo "Működik";
+use App\Routing\Router;
+
+$router = new Router();
+$router->handle();
 
