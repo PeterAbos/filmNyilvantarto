@@ -4,13 +4,15 @@ namespace App\Models;
 
 class CategoryModel extends Model {
 
-    public string $name;
+    public string|null $name = null;
 
     protected static $table = 'category';
 
-    function __construct(string $name)
+    function __construct(?string $name = null)
     {
         parent::__construct();
-        $this->name = $name;
+        if ($name) {
+            $this->name = $name;
+        }
     }
 }
