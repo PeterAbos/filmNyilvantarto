@@ -15,71 +15,71 @@ class GuestController extends Controller {
 
     public function index(): void
     {
-        $guests = $this->model->all(['order_by' => ['name'], 'direction' => ['DESC']]);
-        $this->render('guests/index', ['guests' => $guests]);
+        $actors = $this->model->all(['order_by' => ['name'], 'direction' => ['DESC']]);
+        $this->render('actors/index', ['actors' => $actors]);
     }
 
     public function create(): void
     {
-        $this->render('guests/create');
+        $this->render('actors/create');
     }
     public function edit(int $id): void
     {
-        $guests = $this->model->find($id);
-        if (!$guests) {
+        $actor = $this->model->find($id);
+        if (!$actor) {
             // Handle invalid ID gracefully
-            $_SESSION['warning_message'] = "A vendég a megadott azonosítóval: $id nem található.";
-            $this->redirect('/guests');
+            $_SESSION['warning_message'] = "A színész a megadott azonosítóval: $id nem található.";
+            $this->redirect('/actors');
         }
-        $this->render('guests/edit', ['guests' => $guests]);
+        $this->render('actors/edit', ['actor' => $actor]);
     }
 
     public function save(array $data): void
     {
         if (empty($data['name'])) {
-            $_SESSION['warning_message'] = "A vendég neve kötelező mező.";
-            $this->redirect('/guests/create'); // Redirect if input is invalid
+            $_SESSION['warning_message'] = "A színész neve kötelező mező.";
+            $this->redirect('/actors/create'); // Redirect if input is invalid
         }
         // Use the existing model instance
         $this->model->name = $data['name'];
-        $this->model->age = $data['age'];
+        $this->model->birth_date = $data['birth_date'];
         $this->model->create();
-        $this->redirect('/guests');
+        $this->redirect('/actors');
     }
 
     public function update(int $id, array $data): void
     {
-        $guests = $this->model->find($id);
-        if (!$guests || empty($data['name'])) {
+        $actor = $this->model->find($id);
+        if (!$actor || empty($data['name'])) {
             // Handle invalid ID or data
-            $this->redirect('/guests');
+            $this->redirect('/actors');
         }
-        $guests->name = $data['name'];
-        $guests->age = $data['age'];
-        $guests->update();
-        $this->redirect('/guests');
+        $actor->name = $data['name'];
+        $actor->birth_date = $data['birth_date'];
+        $actor->update();
+        $this->redirect('/actors');
     }
 
     function show(int $id): void
     {
-        $guests = $this->model->find($id);
-        if (!$guests) {
-            $_SESSION['warning_message'] = "A vendég a megadott azonosítóval: $id nem található.";
-            $this->redirect('/guests'); // Handle invalid ID
+        $actor = $this->model->find($id);
+        if (!$actor) {
+            $_SESSION['warning_message'] = "A színész a megadott azonosítóval: $id nem található.";
+            $this->redirect('/actors'); // Handle invalid ID
         }
-        $this->render('guests/show', ['guests' => $guests]);
+        $this->render('actors/show', ['actor' => $actor]);
     }
 
     function delete(int $id): void
     {
-        $guests = $this->model->find($id);
-        if ($guests) {
-            $result = $guests->delete();
+        $actor = $this->model->find($id);
+        if ($actor) {
+            $result = $actor->delete();
             if ($result) {
                 $_SESSION['success_message'] = 'Sikeresen törölve';
             }
         }
 
-        $this->redirect('/guests'); // Redirect regardless of success
+        $this->redirect('/actors'); // Redirect regardless of success
     }
 }
