@@ -12,6 +12,8 @@ foreach ($actors as $actor) {
                         <input type='hidden' name='id' value='{$actor->id}'>
                         <button type='submit' name='btn-edit' title='Módosít'><i class='fa fa-edit'></i></button>
                     </form>
+                </td>
+                <td class='flex float-right'>
                     <form method='post' action='/actors'>
                         <input type='hidden' name='id' value='{$actor->id}'>    
                         <input type='hidden' name='_method' value='DELETE'>
@@ -29,7 +31,7 @@ $html = <<<HTML
                     <th>#</th>
                     <th>Név</th>
                     <th>Születési dátum</th>
-                    <th>
+                    <th colspan="2">
                         <form method='post' action='/actors/create'>
                             <button type="submit" name='btn-plus' title='Új'>
                                 <i class='fa fa-plus plus'></i>&nbsp;Új</button>
