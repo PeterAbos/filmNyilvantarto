@@ -10,4 +10,16 @@ html {
 
 td {
     border: 1px solid black;
+    min-width: 20px;
+    text-align: center;
+}
+
+.fa-trash {
+    color: red;
+}
+.fa-edit {
+    color: blue;
+}
+.fa-plus {
+    color: green;
 }
