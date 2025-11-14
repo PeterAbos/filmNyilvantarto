@@ -1,0 +1,13 @@
+html {
+    background-color: aqua;
+}
+
+.tabla {
+    border-collapse: collapse;
+    background-color: beige;
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+}

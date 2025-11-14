@@ -3,6 +3,7 @@
 namespace App\Routing;
 
 use App\Controllers\HomeController;
+use App\Controllers\ActorsController;
 use App\Views\Display;
 
 class Router
@@ -44,6 +45,10 @@ class Router
             case '/':
                 HomeController::index();
                 return;
+            case '/actors':
+                $actorsController = new ActorsController();
+                $actorsController->index();
+                break;
         }
     }
 

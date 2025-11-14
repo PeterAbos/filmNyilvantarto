@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\ActorsModel;
 use App\Views\Display;
 
-class GuestController extends Controller {
+class ActorsController extends Controller {
 
     public function __construct()
     {

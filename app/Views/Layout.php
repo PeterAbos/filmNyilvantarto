@@ -13,7 +13,7 @@ class Layout
                 <title>$title</title>
 
                 <link href="/fontawesome/css/all.css" rel="stylesheet" type="text/css">
-                <link href="/css/styles.css" rel="stylesheet" type="text/css">
+                <link href="/css/sajat.css" rel="stylesheet" type="text/css">
             </head>
             <body>
         HTML;
@@ -34,6 +34,7 @@ class Layout
         <nav class="navbar">
             <ul class="nav-list">
                 <li class="nav-button"><a href="/"><button style="button" title="Kezdőlap">Kezdőlap</button></a></li>
+                <li class="nav-button"><a href="/actors"><button style="button" title="Actors">Színészek</button></a></li>
             </ul>
         </nav>
         HTML;
