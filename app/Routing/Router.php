@@ -4,6 +4,7 @@ namespace App\Routing;
 
 use App\Controllers\HomeController;
 use App\Controllers\ActorsController;
+use App\Controllers\DirectorsController;
 use App\Views\Display;
 
 class Router
@@ -49,6 +50,10 @@ class Router
                 $actorsController = new ActorsController();
                 $actorsController->index();
                 break;
+            case '/directors':
+                $directorsController = new DirectorsController();
+                $directorsController->index();
+                break;
         }
     }
 
@@ -69,6 +74,18 @@ class Router
                 $actorsController = new ActorsController();
                 $actorsController->save($data);
                 break;
+            case '/directors/edit':
+                $directorsController = new DirectorsController();
+                $directorsController->edit($id);
+                break;
+            case '/directors/create':
+                $directorsController = new DirectorsController();
+                $directorsController->create();
+                break;
+            case '/directors':
+                $directorsController = new DirectorsController();
+                $directorsController->save($data);
+                break;
         }
     }
 
@@ -80,6 +97,11 @@ class Router
                 $actorsController = new ActorsController();
                 $actorsController->update($id, $data);
                 break;
+            case '/directors':
+                $id = $data['id'] ?? null;
+                $directorsController = new DirectorsController();
+                $directorsController->update($id, $data);
+                break;
         }
     }
 
@@ -90,6 +112,10 @@ class Router
             case '/actors':
                 $actorsController = new ActorsController();
                 $actorsController->delete((int) $data['id']);
+                break;
+            case '/directors':
+                $directorsController = new DirectorsController();
+                $directorsController->delete((int) $data['id']);
                 break;
         }
     }
