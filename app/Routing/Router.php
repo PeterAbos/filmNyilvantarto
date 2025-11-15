@@ -61,6 +61,14 @@ class Router
                 $actorsController = new ActorsController();
                 $actorsController->edit($id);
                 break;
+            case '/actors/create':
+                $actorsController = new ActorsController();
+                $actorsController->create();
+                break;
+            case '/actors':
+                $actorsController = new ActorsController();
+                $actorsController->save($data);
+                break;
         }
     }
 
