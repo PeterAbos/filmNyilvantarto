@@ -6,6 +6,7 @@ use App\Controllers\HomeController;
 use App\Controllers\ActorsController;
 use App\Controllers\CategoryController;
 use App\Controllers\DirectorsController;
+use App\Controllers\StudiosController;
 use App\Views\Display;
 
 class Router
@@ -59,6 +60,10 @@ class Router
                 $categoryController = new CategoryController();
                 $categoryController->index();
                 break;
+            case '/studios':
+                $studiosController = new StudiosController();
+                $studiosController->index();
+                break;
         }
     }
 
@@ -103,6 +108,18 @@ class Router
                 $categoryController = new CategoryController();
                 $categoryController->save($data);
                 break;
+            case '/studios/edit':
+                $studiosController = new StudiosController();
+                $studiosController->edit($id);
+                break;
+            case '/studios/create':
+                $studiosController = new StudiosController();
+                $studiosController->create();
+                break;
+            case '/studios':
+                $studiosController = new StudiosController();
+                $studiosController->save($data);
+                break;
         }
     }
 
@@ -124,6 +141,11 @@ class Router
                 $categoryController = new CategoryController();
                 $categoryController->update($id, $data);
                 break;
+            case '/studios':
+                $id = $data['id'] ?? null;
+                $studiosController = new StudiosController();
+                $studiosController->update($id, $data);
+                break;
         }
     }
 
@@ -142,6 +164,10 @@ class Router
             case '/categories':
                 $categoryController = new CategoryController();
                 $categoryController->delete((int) $data['id']);
+                break;
+            case '/categories':
+                $studiosController = new StudiosController();
+                $studiosController->delete((int) $data['id']);
                 break;
         }
     }
