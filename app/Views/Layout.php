@@ -36,6 +36,7 @@ class Layout
                 <li class="nav-button"><a href="/"><button style="button" title="Kezdőlap">Kezdőlap</button></a></li>
                 <li class="nav-button"><a href="/actors"><button style="button" title="Actors">Színészek</button></a></li>
                 <li class="nav-button"><a href="/directors"><button style="button" title="Directors">Rendezők</button></a></li>
+                <li class="nav-button"><a href="/categories"><button style="button" title="Categories">Kategóriák</button></a></li>
             </ul>
         </nav>
         HTML;
