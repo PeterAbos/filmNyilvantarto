@@ -165,7 +165,7 @@ class Router
                 $categoryController = new CategoryController();
                 $categoryController->delete((int) $data['id']);
                 break;
-            case '/categories':
+            case '/studios':
                 $studiosController = new StudiosController();
                 $studiosController->delete((int) $data['id']);
                 break;
