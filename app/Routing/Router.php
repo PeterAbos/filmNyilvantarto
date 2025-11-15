@@ -84,7 +84,14 @@ class Router
     }
 
     private function handleDeleteRequests(mixed $requestUri) {
-        
+        $data = $this->filterPostData($_POST);
+
+        switch($requestUri) {
+            case '/actors':
+                $actorsController = new ActorsController();
+                $actorsController->delete((int) $data['id']);
+                break;
+        }
     }
 
     private function methodNotAllowed(): void
