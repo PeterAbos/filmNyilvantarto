@@ -4,6 +4,7 @@ namespace App\Routing;
 
 use App\Controllers\HomeController;
 use App\Controllers\ActorsController;
+use App\Controllers\CategoryController;
 use App\Controllers\DirectorsController;
 use App\Views\Display;
 
@@ -54,6 +55,10 @@ class Router
                 $directorsController = new DirectorsController();
                 $directorsController->index();
                 break;
+            case '/categories':
+                $categoryController = new CategoryController();
+                $categoryController->index();
+                break;
         }
     }
 
@@ -86,6 +91,18 @@ class Router
                 $directorsController = new DirectorsController();
                 $directorsController->save($data);
                 break;
+            case '/categories/edit':
+                $categoryController = new CategoryController();
+                $categoryController->edit($id);
+                break;
+            case '/categories/create':
+                $categoryController = new CategoryController();
+                $categoryController->create();
+                break;
+            case '/categories':
+                $categoryController = new CategoryController();
+                $categoryController->save($data);
+                break;
         }
     }
 
@@ -102,6 +119,11 @@ class Router
                 $directorsController = new DirectorsController();
                 $directorsController->update($id, $data);
                 break;
+            case '/categories':
+                $id = $data['id'] ?? null;
+                $categoryController = new CategoryController();
+                $categoryController->update($id, $data);
+                break;
         }
     }
 
@@ -116,6 +138,10 @@ class Router
             case '/directors':
                 $directorsController = new DirectorsController();
                 $directorsController->delete((int) $data['id']);
+                break;
+            case '/categories':
+                $categoryController = new CategoryController();
+                $categoryController->delete((int) $data['id']);
                 break;
         }
     }
