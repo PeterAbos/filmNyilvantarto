@@ -53,11 +53,26 @@ class Router
     }
 
     private function handlePostRequests(mixed $requestUri) {
-        
+        $data = $this->filterPostData($_POST);
+        $id = $data['id'] ?? null;
+
+        switch ($requestUri) {
+            case '/actors/edit':
+                $actorsController = new ActorsController();
+                $actorsController->edit($id);
+                break;
+        }
     }
 
     private function handlePatchRequests(mixed $requestUri) {
-        
+        $data = $this->filterPostData($_POST);
+        switch($requestUri) {
+            case '/actors':
+                $id = $data['id'] ?? null;
+                $actorsController = new ActorsController();
+                $actorsController->update($id, $data);
+                break;
+        }
     }
 
     private function handleDeleteRequests(mixed $requestUri) {
