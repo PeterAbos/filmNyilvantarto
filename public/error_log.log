@@ -4,3 +4,16 @@
 [06-Oct-2025 13:22:20 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\Books_php\app\Controllers\BookController.php on line 61
 [06-Oct-2025 13:22:20 Europe/Berlin] PHP Warning:  Undefined array key "sesries_num" in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\Books_php\app\Controllers\BookController.php on line 67
 [06-Oct-2025 13:22:20 Europe/Berlin] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[16-Nov-2025 15:19:26 Europe/Berlin] SQLSTATE[HY000] [2002] Nem hozható létre kapcsolat, mert a célszámítógép már visszautasította a kapcsolatot
+[16-Nov-2025 15:19:26 Europe/Berlin] PHP Fatal error:  Uncaught RuntimeException: Database connection error. in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Database\Database.php:36
+Stack trace:
+#0 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Database\Database.php(43): App\Database\Database->__construct(Array)
+#1 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Models\Model.php(18): App\Database\Database::getInstance()
+#2 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Models\StudioModel.php(13): App\Models\Model->__construct()
+#3 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Controllers\StudiosController.php(12): App\Models\StudioModel->__construct()
+#4 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(64): App\Controllers\StudiosController->__construct()
+#5 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(30): App\Routing\Router->handleGetRequests('/studios')
+#6 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(23): App\Routing\Router->dispatch('GET', '/studios')
+#7 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\public\index.php(24): App\Routing\Router->handle()
+#8 {main}
+  thrown in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Database\Database.php on line 36
