@@ -6,6 +6,7 @@ use App\Controllers\HomeController;
 use App\Controllers\ActorsController;
 use App\Controllers\CategoryController;
 use App\Controllers\DirectorsController;
+use App\Controllers\MoviesController;
 use App\Controllers\StudiosController;
 use App\Views\Display;
 
@@ -63,6 +64,10 @@ class Router
             case '/studios':
                 $studiosController = new StudiosController();
                 $studiosController->index();
+                break;
+            case '/movies':
+                $moviesController = new MoviesController();
+                $moviesController->index();
                 break;
         }
     }
