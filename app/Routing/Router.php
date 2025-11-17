@@ -163,6 +163,11 @@ class Router
                 $studiosController = new StudiosController();
                 $studiosController->update($id, $data);
                 break;
+            case '/movies':
+                $id = $data['id'] ?? null;
+                $moviesController = new MoviesController();
+                $moviesController->update($id, $data);
+                break;
         }
     }
 
@@ -185,6 +190,10 @@ class Router
             case '/studios':
                 $studiosController = new StudiosController();
                 $studiosController->delete((int) $data['id']);
+                break;
+            case '/movies':
+                $moviesController = new MoviesController();
+                $moviesController->delete((int) $data['id']);
                 break;
         }
     }

@@ -22,7 +22,10 @@ class MoviesController extends Controller {
 
     public function create(): void
     {
-        $this->render('movies/create');
+        $studios = new StudiosController();
+        $directors = new DirectorsController();
+        $categories = new CategoryController();
+        $this->render('movies/create', ['studios' => $studios->model, 'directors' => $directors->model, 'categories' => $categories->model]);
     }
     public function edit(int $id): void
     {

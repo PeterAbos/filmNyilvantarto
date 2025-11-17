@@ -2,12 +2,10 @@
 
 echo <<<HTML
         <form method='post' action='/movies'>
-            <input type='hidden' name='_method' value='PATCH'>
-            <input type='hidden' name='id' value="{$movie->id}">
             <fieldset>
                 <label for="movie">Film</label>
-                <input type="text" name="title" id="title" value="{$movie->title}">
-                <input type="number" name="duration" id="duration" value="{$movie->duration}">
+                <input type="text" name="title" id="title">
+                <input type="number" name="duration" id="duration">
         HTML;
 
 echo "<select name='studio_id' id='studio_id'>";
@@ -29,7 +27,7 @@ foreach ($categories->all() as $category) {
 echo "</select>";
 
 echo <<<HTML
-                <input type='number' name='release_year' id='release_year' value="{$movie->release_year}">
+                <input type='number' name='release_year' id='release_year'>
                 <hr>
                 <button type="submit" name="btn-update"><i class="fa fa-save">                    
                     </i>&nbsp;Mentés
