@@ -142,6 +142,18 @@ class Router
                 $moviesController = new MoviesController();
                 $moviesController->save($data);
                 break;
+            case '/casting/edit':
+                $castingController = new CastingController();
+                $castingController->edit($id);
+                break;
+            case '/casting/create':
+                $castingController = new CastingController();
+                $castingController->create();
+                break;
+            case '/casting':
+                $castingController = new CastingController();
+                $castingController->save($data);
+                break;
         }
     }
 
@@ -173,6 +185,11 @@ class Router
                 $moviesController = new MoviesController();
                 $moviesController->update($id, $data);
                 break;
+            case '/casting':
+                $id = $data['id'] ?? null;
+                $castingController = new CastingController();
+                $castingController->update($id, $data);
+                break;
         }
     }
 
@@ -199,6 +216,10 @@ class Router
             case '/movies':
                 $moviesController = new MoviesController();
                 $moviesController->delete((int) $data['id']);
+                break;
+            case '/casting':
+                $castingController = new CastingController();
+                $castingController->delete((int) $data['id']);
                 break;
         }
     }
