@@ -23,7 +23,9 @@ class CastingController extends Controller {
 
     public function create(): void
     {
-        $this->render('casting/create');
+        $movies = new MoviesController();
+        $actors = new ActorsController();
+        $this->render('casting/create', ['movies' => $movies->model, 'actors' => $actors->model]);
     }
     public function edit(int $id): void
     {
