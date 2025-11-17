@@ -21,4 +21,20 @@ class CastingModel extends Model {
             $this->character_name = $character_name;
         }
     }
+
+    function getMovie() {
+        $movies = new MoviesModel();
+
+        $result = $movies->find($this->movie_id);
+
+        return $result;
+    }
+
+    function getActor() {
+        $actors = new ActorsModel();
+
+        $result = $actors->find($this->actor_id);
+
+        return $result;
+    }
 }
