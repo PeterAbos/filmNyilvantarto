@@ -23,3 +23,11 @@ td {
 .fa-plus {
     color: green;
 }
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+}
+.nav-button {
+    margin: 4px;
+}
