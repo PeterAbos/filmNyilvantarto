@@ -14,6 +14,8 @@ class MoviesModel extends Model {
     public int|null $director_id = null;
     public int|null $category_id = null;
     public int|null $release_year = null;
+    public float|null $rating_avg = null;
+    public int|null $rating_count = null;
 
     protected static $table = 'movies';
 

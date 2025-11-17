@@ -58,3 +58,35 @@ Stack trace:
 #7 {main}
   thrown in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Views\casting\edit.php on line 12
 [17-Nov-2025 10:05:10 Europe/Berlin] View not found: C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Views\casting/create.php
+[17-Nov-2025 13:42:22 Europe/Berlin] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Controllers\MoviesController.php:77
+Stack trace:
+#0 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(186): App\Controllers\MoviesController->update(3, Array)
+#1 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(38): App\Routing\Router->handlePatchRequests('/movies')
+#2 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(25): App\Routing\Router->dispatch('PATCH', '/movies')
+#3 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\public\index.php(24): App\Routing\Router->handle()
+#4 {main}
+  thrown in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Controllers\MoviesController.php on line 77
+[17-Nov-2025 13:43:22 Europe/Berlin] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Controllers\MoviesController.php:77
+Stack trace:
+#0 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(186): App\Controllers\MoviesController->update(3, Array)
+#1 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(38): App\Routing\Router->handlePatchRequests('/movies')
+#2 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(25): App\Routing\Router->dispatch('PATCH', '/movies')
+#3 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\public\index.php(24): App\Routing\Router->handle()
+#4 {main}
+  thrown in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Controllers\MoviesController.php on line 77
+[17-Nov-2025 13:44:45 Europe/Berlin] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Controllers\MoviesController.php:77
+Stack trace:
+#0 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(186): App\Controllers\MoviesController->update(3, Array)
+#1 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(38): App\Routing\Router->handlePatchRequests('/movies')
+#2 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(25): App\Routing\Router->dispatch('PATCH', '/movies')
+#3 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\public\index.php(24): App\Routing\Router->handle()
+#4 {main}
+  thrown in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Controllers\MoviesController.php on line 77
+[17-Nov-2025 13:47:31 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot assign string to property App\Models\MoviesModel::$rating_count of type ?int in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Controllers\MoviesController.php:78
+Stack trace:
+#0 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(186): App\Controllers\MoviesController->update(3, Array)
+#1 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(38): App\Routing\Router->handlePatchRequests('/movies')
+#2 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(25): App\Routing\Router->dispatch('PATCH', '/movies')
+#3 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\public\index.php(24): App\Routing\Router->handle()
+#4 {main}
+  thrown in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Controllers\MoviesController.php on line 78

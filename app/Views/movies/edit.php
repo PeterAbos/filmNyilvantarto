@@ -30,11 +30,14 @@ echo "</select>";
 
 echo <<<HTML
                 <input type='number' name='release_year' id='release_year' value="{$movie->release_year}">
+                <input type='hidden' name='rating_avg' id='rating_avg' value="{$movie->rating_avg}">
+                <input type='hidden' name='rate' id='rate' value="0">
+                <input type='hidden' name='rating_count' id='rating_count' value="{$movie->rating_count}">
                 <hr>
                 <button type="submit" name="btn-update"><i class="fa fa-save">                    
                     </i>&nbsp;Mentés
                 </button>
-                <a href="/reservations"><i class="fa fa-cancel"></i>&nbsp;Mégse
+                <a href="/movies"><i class="fa fa-cancel"></i>&nbsp;Mégse
                 </a>
             </fieldset>
         </form>

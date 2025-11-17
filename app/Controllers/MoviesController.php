@@ -55,6 +55,8 @@ class MoviesController extends Controller {
         $this->model->director_id = $data['director_id'];
         $this->model->category_id = $data['category_id'];
         $this->model->release_year = $data['release_year'];
+        $this->model->rating_avg = 0;
+        $this->model->rating_count = 0;
         $this->model->create();
         $this->redirect('/movies');
     }
@@ -72,6 +74,12 @@ class MoviesController extends Controller {
         $movie->director_id = $data['director_id'];
         $movie->category_id = $data['category_id'];
         $movie->release_year = $data['release_year'];
+        $movie->rating_avg = $data['rating_avg'];
+        $movie->rating_count = $data['rating_count'];
+        if ($data['rating_count'] != 0) {
+            $movie->rating_avg = round(((($data['rating_count']-1)*$data['rating_avg'])+$data['rate'])/$data['rating_count'], 2);
+            $movie->rating_count = $data['rating_count'];
+        }
         $movie->update();
         $this->redirect('/movies');
     }
