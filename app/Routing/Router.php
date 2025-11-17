@@ -4,6 +4,7 @@ namespace App\Routing;
 
 use App\Controllers\HomeController;
 use App\Controllers\ActorsController;
+use App\Controllers\CastingController;
 use App\Controllers\CategoryController;
 use App\Controllers\DirectorsController;
 use App\Controllers\MoviesController;
@@ -68,6 +69,10 @@ class Router
             case '/movies':
                 $moviesController = new MoviesController();
                 $moviesController->index();
+                break;
+            case '/casting':
+                $castingController = new CastingController();
+                $castingController->index();
                 break;
         }
     }

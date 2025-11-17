@@ -2,11 +2,16 @@
 
 namespace App\Models;
 
+use App\Models\ActorsModel;
+use App\Models\MoviesModel;
+
 class CastingModel extends Model {
 
     public int|null $movie_id = null;
     public int|null $actor_id = null;
     public string|null $character_name = null;
+
+    protected static $table = 'casting';
 
     function __construct(?int $movie_id = null, ?int $actor_id = null, ?string $character_name = null)
     {

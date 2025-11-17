@@ -40,3 +40,8 @@ Stack trace:
 #6 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\public\index.php(24): App\Routing\Router->handle()
 #7 {main}
   thrown in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Views\movies\edit.php on line 13
+[17-Nov-2025 09:41:55 Europe/Berlin] SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+[17-Nov-2025 09:42:38 Europe/Berlin] SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+[17-Nov-2025 09:42:47 Europe/Berlin] SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+[17-Nov-2025 09:44:10 Europe/Berlin] SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+[17-Nov-2025 09:46:23 Europe/Berlin] SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''

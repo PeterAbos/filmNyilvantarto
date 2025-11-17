@@ -39,6 +39,7 @@ class Layout
                 <li class="nav-button"><a href="/categories"><button style="button" title="Categories">Kategóriák</button></a></li>
                 <li class="nav-button"><a href="/studios"><button style="button" title="Studios">Stúdiók</button></a></li>
                 <li class="nav-button"><a href="/movies"><button style="button" title="Movies">Filmek</button></a></li>
+                <li class="nav-button"><a href="/casting"><button style="button" title="Casting">Szereposztás</button></a></li>
             </ul>
         </nav>
         HTML;
