@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\CastingModel;
+use App\Controllers\MoviesController;
+use App\Controllers\ActorsController;
 use App\Views\Display;
 
 class CastingController extends Controller {
@@ -31,7 +33,10 @@ class CastingController extends Controller {
             $_SESSION['warning_message'] = "A szerep a megadott azonosítóval: $id nem található.";
             $this->redirect('/casting');
         }
-        $this->render('casting/edit', ['role' => $role]);
+
+        $movies = new MoviesController();
+        $actors = new ActorsController();
+        $this->render('casting/edit', ['role' => $role, 'movies' => $movies->model, 'actors' => $actors->model]);
     }
 
     public function save(array $data): void

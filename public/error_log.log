@@ -45,3 +45,16 @@ Stack trace:
 [17-Nov-2025 09:42:47 Europe/Berlin] SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
 [17-Nov-2025 09:44:10 Europe/Berlin] SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
 [17-Nov-2025 09:46:23 Europe/Berlin] SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+[17-Nov-2025 10:03:29 Europe/Berlin] PHP Warning:  Undefined variable $movies in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Views\casting\edit.php on line 12
+[17-Nov-2025 10:03:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function all() on null in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Views\casting\edit.php:12
+Stack trace:
+#0 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Views\View.php(21): include()
+#1 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Controllers\Controller.php(27): App\Views\View::render('casting/edit', Array)
+#2 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Controllers\CastingController.php(34): App\Controllers\Controller->render('casting/edit', Array)
+#3 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(147): App\Controllers\CastingController->edit(5)
+#4 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(35): App\Routing\Router->handlePostRequests('/casting/edit')
+#5 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(25): App\Routing\Router->dispatch('POST', '/casting/edit')
+#6 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\public\index.php(24): App\Routing\Router->handle()
+#7 {main}
+  thrown in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Views\casting\edit.php on line 12
+[17-Nov-2025 10:05:10 Europe/Berlin] View not found: C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Views\casting/create.php
