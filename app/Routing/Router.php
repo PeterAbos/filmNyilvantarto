@@ -125,6 +125,18 @@ class Router
                 $studiosController = new StudiosController();
                 $studiosController->save($data);
                 break;
+            case '/movies/edit':
+                $moviesController = new MoviesController();
+                $moviesController->edit($id);
+                break;
+            case '/movies/create':
+                $moviesController = new MoviesController();
+                $moviesController->create();
+                break;
+            case '/movies':
+                $moviesController = new MoviesController();
+                $moviesController->save($data);
+                break;
         }
     }
 

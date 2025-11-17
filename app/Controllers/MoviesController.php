@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Model;
 use App\Models\MoviesModel;
 use App\Views\Display;
 
@@ -31,7 +32,11 @@ class MoviesController extends Controller {
             $_SESSION['warning_message'] = "A film a megadott azonosítóval: $id nem található.";
             $this->redirect('/movies');
         }
-        $this->render('movies/edit', ['movie' => $movie]);
+
+        $studios = new StudiosController();
+        $directors = new DirectorsController();
+        $categories = new CategoryController();
+        $this->render('movies/edit', ['movie' => $movie, 'studios' => $studios->model, 'directors' => $directors->model, 'categories' => $categories->model]);
     }
 
     public function save(array $data): void

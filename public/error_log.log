@@ -17,3 +17,26 @@ Stack trace:
 #7 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\public\index.php(24): App\Routing\Router->handle()
 #8 {main}
   thrown in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Database\Database.php on line 36
+[17-Nov-2025 08:29:09 Europe/Berlin] PHP Warning:  Undefined variable $studios in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Views\movies\edit.php on line 13
+[17-Nov-2025 08:29:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function all() on null in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Views\movies\edit.php:13
+Stack trace:
+#0 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Views\View.php(21): include()
+#1 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Controllers\Controller.php(27): App\Views\View::render('movies/edit', Array)
+#2 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Controllers\MoviesController.php(34): App\Controllers\Controller->render('movies/edit', Array)
+#3 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(130): App\Controllers\MoviesController->edit(3)
+#4 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(34): App\Routing\Router->handlePostRequests('/movies/edit')
+#5 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(24): App\Routing\Router->dispatch('POST', '/movies/edit')
+#6 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\public\index.php(24): App\Routing\Router->handle()
+#7 {main}
+  thrown in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Views\movies\edit.php on line 13
+[17-Nov-2025 08:31:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Controllers\StudiosController::all() in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Views\movies\edit.php:13
+Stack trace:
+#0 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Views\View.php(21): include()
+#1 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Controllers\Controller.php(27): App\Views\View::render('movies/edit', Array)
+#2 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Controllers\MoviesController.php(38): App\Controllers\Controller->render('movies/edit', Array)
+#3 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(130): App\Controllers\MoviesController->edit(3)
+#4 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(34): App\Routing\Router->handlePostRequests('/movies/edit')
+#5 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Routing\Router.php(24): App\Routing\Router->dispatch('POST', '/movies/edit')
+#6 C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\public\index.php(24): App\Routing\Router->handle()
+#7 {main}
+  thrown in C:\AdatokPetie\Suli\12.osztaly\web_Kovacs\filmNyilvantarto\app\Views\movies\edit.php on line 13
