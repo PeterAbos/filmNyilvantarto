@@ -2,6 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\StudioModel;
+use App\Models\DirectorsModel;
+use App\Models\CategoryModel;
+
 class MoviesModel extends Model {
 
     public string|null $title = null;
@@ -34,5 +38,29 @@ class MoviesModel extends Model {
         if ($release_year) {
             $this->release_year = $release_year;
         }
+    }
+
+    function getStudio() {
+        $studioModel = new StudioModel();
+
+        $result = $studioModel->find($this->studio_id);
+
+        return $result;
+    }
+
+    function getDirector() {
+        $directorModel = new DirectorsModel();
+
+        $result = $directorModel->find($this->director_id);
+
+        return $result;
+    }
+
+    function getCategory() {
+        $categoryModel = new CategoryModel();
+
+        $result = $categoryModel->find($this->category_id);
+
+        return $result;
     }
 }

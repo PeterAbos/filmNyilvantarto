@@ -6,6 +6,7 @@ use App\Controllers\HomeController;
 use App\Controllers\ActorsController;
 use App\Controllers\CategoryController;
 use App\Controllers\DirectorsController;
+use App\Controllers\MoviesController;
 use App\Controllers\StudiosController;
 use App\Views\Display;
 
@@ -64,6 +65,10 @@ class Router
                 $studiosController = new StudiosController();
                 $studiosController->index();
                 break;
+            case '/movies':
+                $moviesController = new MoviesController();
+                $moviesController->index();
+                break;
         }
     }
 
@@ -120,6 +125,18 @@ class Router
                 $studiosController = new StudiosController();
                 $studiosController->save($data);
                 break;
+            case '/movies/edit':
+                $moviesController = new MoviesController();
+                $moviesController->edit($id);
+                break;
+            case '/movies/create':
+                $moviesController = new MoviesController();
+                $moviesController->create();
+                break;
+            case '/movies':
+                $moviesController = new MoviesController();
+                $moviesController->save($data);
+                break;
         }
     }
 
@@ -146,6 +163,11 @@ class Router
                 $studiosController = new StudiosController();
                 $studiosController->update($id, $data);
                 break;
+            case '/movies':
+                $id = $data['id'] ?? null;
+                $moviesController = new MoviesController();
+                $moviesController->update($id, $data);
+                break;
         }
     }
 
@@ -168,6 +190,10 @@ class Router
             case '/studios':
                 $studiosController = new StudiosController();
                 $studiosController->delete((int) $data['id']);
+                break;
+            case '/movies':
+                $moviesController = new MoviesController();
+                $moviesController->delete((int) $data['id']);
                 break;
         }
     }
